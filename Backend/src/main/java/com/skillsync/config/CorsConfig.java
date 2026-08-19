@@ -16,7 +16,7 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000"));
+        config.setAllowedOriginPatterns(List.of("http://localhost:*", "https://*.vercel.app", "*"));
         config.setAllowedHeaders(Arrays.asList(
                 "Origin", "Access-Control-Allow-Origin", "Content-Type",
                 "Accept", "Authorization", "Origin, Accept", "X-Requested-With",
